@@ -1,0 +1,194 @@
+/* 1. Use a more-intuitive box-sizing model */
+
+:root {
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+body {
+  /* 3. Add accessible line-height */
+  line-height: 1.5;
+  /* 4. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+/* 5. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/* 6. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/* 7. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/* 8. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+/*
+  9. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background-image: url(./hand-drawn-food.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: whitesmoke;
+  row-gap: 1em;
+}
+
+button {
+  position: relative;
+  width: 5em;
+}
+
+button:focus:before {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-image: url(./chef.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  content: "";
+  left: 20px;
+  z-index: 10;
+}
+
+#content {
+  background-color: aliceblue;
+  border: 1px solid;
+  width: min(700px, 95vw);
+  text-align: center;
+  transition: opacity 0.5s;
+opacity: 1;
+}
+.home{
+  /* position: relative; */
+}
+
+.rect {
+  position: relative;
+  margin: 0 auto;
+  width: 70%;
+
+}
+
+.info {
+  position: relative;
+  z-index:15;
+}
+
+.abs {
+  margin: 20px auto;
+  top: 0px;
+  position: absolute;
+  width: 140%;
+  height: 102%;
+  background-image: url(./hand-drawn-food.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 0;
+  border: 1px solid;
+}
+
+ul {
+  list-style-type: none;
+}
+
+[title*="tet"] {
+  /*  background-color: pink; */
+}
+
+/* finally figured out the issue  */
+[alt^="chef"] {
+  /* width:90%; */
+  /* padding:10px; */
+  /* display: block; */
+}
+
+footer {
+  margin-top: auto;
+  background-color: aliceblue;
+  width: 100%;
+  text-align: center;
+}
+
+.hours{
+  margin-right: 40px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.menu-items{
+  padding: 2rem;
+}
+
+.item{
+  display: flex;
+}
+
+.row-reverse{
+  flex-direction: row-reverse;
+}
+
+.left{
+  /* flex-grow: 2; */
+  width: 50%;
+}
+
+.right{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.item-title{
+  text-align: left;
+}
+
+[alt^="jerk-chicken"]{
+width: 200px;
+}
